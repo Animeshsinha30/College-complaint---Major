@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Complaint Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>College Complaint Management System</h1>
+    <button onclick="showStudent()">Student</button>
+    <button onclick="showAdmin()">🔐 Admin</button>
+</header>
+
+<!-- STUDENT SECTION -->
+<div id="student" class="container">
+
+    <h2>Submit Complaint</h2>
+
+    <input id="name" placeholder="Student Name">
+
+    <select id="category">
+        <option value="" disabled selected>Select Category</option>
+        <option value="Classroom">Classroom</option>
+        <option value="Hostel">Hostel</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Library">Library</option>
+        <option value="Other">Other</option>
+    </select>
+
+    <textarea id="complaint" placeholder="Enter your complaint"></textarea>
+
+   <select id="priority">
+
+    <option value="" disabled selected>Select Priority</option>
+
+    <option value="3">High</option>
+
+    <option value="2">Medium</option>
+
+    <option value="1">Low</option>
+
+</select>
+
+    <button onclick="submitComplaint()">Submit Complaint</button>
+
+    <p id="message"></p>
+
+</div>
+
+
+<!-- ADMIN SECTION -->
+<div id="admin" class="container" style="display:none">
+
+    <h2>Admin Dashboard</h2>
+
+    <div id="complaintList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
